@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
 import { Button, View } from "react-native";
 import DateTimePicker from "react-native-modal-datetime-picker";
+import ActionButton from 'react-native-action-button';
+
 
 class NewAlarm extends Component{
     constructor(props) {
@@ -20,14 +21,17 @@ class NewAlarm extends Component{
       };
     
       handleDatePicked = date => {
-        console.warn("A date has been picked: ", date);
+        console.warn(date.getDate());
         this.hideDateTimePicker();
       };
     
       render() {
         return (
           <>
-            <Button title="Novo alarme" onPress={this.showDateTimePicker} />
+            <ActionButton
+              buttonColor="rgba(231,76,60,1)"
+              onPress={() => { this.showDateTimePicker() }}
+            />
             <DateTimePicker
               mode={'datetime'}
               isVisible={this.state.isDateTimePickerVisible}
