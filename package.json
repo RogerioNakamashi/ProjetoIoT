@@ -10,7 +10,7 @@
   "dependencies": {
     "@shoutem/ui": "^0.24.1",
     "react": "16.8.6",
-    "react-native": "0.60.3",
+    "react-native": "0.62.3",
     "react-native-modal-datetime-picker": "^7.5.0"
   },
   "devDependencies": {
